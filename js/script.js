@@ -19,10 +19,10 @@ function loadData() {
     var address = street + ', ' + city;
 
     // Update the greeting
-    if (street == "") {
-        $greeting.text('So, you want to live in ' + city + '?');
-    } else {
+    if (street) {
         $greeting.text('So, you want to live at ' + address + '?');
+    } else {
+        $greeting.text('So, you want to live in ' + city + '?');
     }
     
 
@@ -61,6 +61,8 @@ function loadData() {
                 '<p>' + article.snippet + '</p>' +
                 '</li>');
         };
+    }).error(function(e) {
+        $nytHeaderElem.text('New York Times Articles Could Not Be Loaded');
     });
 
 

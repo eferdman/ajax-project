@@ -1,6 +1,23 @@
 * {box-sizing:border-box;}
 body {background-color: #CCC;}
 
+input, button {
+      border: 0;
+      padding: 10px;
+      font-size: 18px;
+}
+
+button {
+      background: #2c8;
+      color: white;
+      position: center;
+}
+
+.form-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .bgimg {
     position:fixed;
     top: 0;
